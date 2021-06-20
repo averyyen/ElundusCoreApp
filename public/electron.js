@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, session, ipcMain } = require("electron");
+const { app, BrowserWindow, Menu, ipcMain } = require("electron");
 const isDev = require("electron-is-dev");
 const shell = require("electron").shell;
 const { autoUpdater } = require("electron-updater");
@@ -13,7 +13,6 @@ function createWindow() {
     width: 1024,
     height: 700,
     show: false,
-    frame: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
